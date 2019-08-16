@@ -12,7 +12,7 @@
         android:id="@+id/ll_shopping"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/img_shopping"
@@ -25,8 +25,8 @@
             android:layout_marginLeft="16dp"
             android:text="Almond"
             android:textSize="16sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"/>
 
     </LinearLayout>
