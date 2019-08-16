@@ -1,4 +1,4 @@
-package com.lambdaschool.sprint2_challenge
+package com.lambdaschool.sprint2_challenge.model
 
 data class ShoppingItem (
     val name: String,

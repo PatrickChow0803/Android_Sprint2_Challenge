@@ -1,4 +1,4 @@
-package com.lambdaschool.sprint2_challenge
+package com.lambdaschool.sprint2_challenge.adapter
 
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.lambdaschool.sprint2_challenge.R
+import com.lambdaschool.sprint2_challenge.model.ShoppingItem
 import kotlinx.android.synthetic.main.shopping_list_item.view.*
 
 class ShoppingListAdapter(val shoppingList: MutableList<ShoppingItem>): RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>(){
@@ -34,7 +36,7 @@ class ShoppingListAdapter(val shoppingList: MutableList<ShoppingItem>): Recycler
 
     //Converts the XML card into a viewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.shopping_list_item, parent,false) as View)
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.shopping_list_item, parent, false) as View)
     }
 
     //Returns the size of the shoppingList
