@@ -1,5 +1,6 @@
 package com.lambdaschool.sprint2_challenge
 
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -20,6 +21,14 @@ class ShoppingListAdapter(val shoppingList: MutableList<ShoppingItem>): Recycler
         fun editModel(shopping: ShoppingItem){
             shoppingImageView.setImageResource(shopping.image)
             shoppingNameView.text = shopping.name
+            if (shopping.isSelected) {
+                shoppingListView.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.primaryColor))
+                shoppingNameView.setTextColor(ContextCompat.getColor(itemView.context, R.color.primaryTextColor))
+            }
+            else {
+                shoppingListView.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.secondaryColor))
+                shoppingNameView.setTextColor(ContextCompat.getColor(itemView.context, R.color.secondaryTextColor))
+            }
         }
     }
 
@@ -37,5 +46,9 @@ class ShoppingListAdapter(val shoppingList: MutableList<ShoppingItem>): Recycler
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val shopping = shoppingList[position]
         holder.editModel(shopping)
+        holder.shoppingListView.setOnClickListener {
+            shopping.isSelected = !shopping.isSelected
+            notifyItemChanged(position)
+        }
     }
 }

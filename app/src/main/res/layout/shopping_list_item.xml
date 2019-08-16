@@ -24,7 +24,7 @@
             android:id="@+id/tv_shopping"
             android:layout_marginLeft="16dp"
             android:text="Almond"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"/>
