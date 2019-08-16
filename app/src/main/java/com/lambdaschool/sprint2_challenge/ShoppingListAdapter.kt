@@ -22,12 +22,12 @@ class ShoppingListAdapter(val shoppingList: MutableList<ShoppingItem>): Recycler
             shoppingImageView.setImageResource(shopping.image)
             shoppingNameView.text = shopping.name
             if (shopping.isSelected) {
-                shoppingListView.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.primaryColor))
-                shoppingNameView.setTextColor(ContextCompat.getColor(itemView.context, R.color.primaryTextColor))
-            }
-            else {
                 shoppingListView.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.secondaryColor))
                 shoppingNameView.setTextColor(ContextCompat.getColor(itemView.context, R.color.secondaryTextColor))
+            }
+            else {
+                shoppingListView.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.primaryColor))
+                shoppingNameView.setTextColor(ContextCompat.getColor(itemView.context, R.color.primaryTextColor))
             }
         }
     }
